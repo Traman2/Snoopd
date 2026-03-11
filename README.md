@@ -90,3 +90,9 @@ ipcWebContentSend("update-counter", mainWindow.webContents, {
     storageUsage: storageData.usage
 });
 ```
+
+# Color Scheme
+- FBE4D6
+- 261FB3
+- 161179
+- 0C0950

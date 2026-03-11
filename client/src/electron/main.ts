@@ -3,6 +3,7 @@ import path from "path";
 import { ipcHandle, isDev } from './util.js';
 import { getPreloadPath } from './pathResolver.js';
 import { fileURLToPath } from "url";
+import { createTray } from './tray.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,7 +25,7 @@ app.on('ready', () => {
   const mainWindow = new BrowserWindow({
     show: false,
     frame: false,
-    width: 1000,
+    width: 1200,
     height: 700,
     webPreferences: {
       preload: getPreloadPath()
@@ -62,4 +63,6 @@ app.on('ready', () => {
   ipcHandle("onMinimize", () => {
     mainWindow.minimize();
   })
+
+  createTray(mainWindow);
 })

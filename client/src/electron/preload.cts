@@ -3,6 +3,7 @@ const electron = require('electron') as typeof import('electron');
 
 electron.contextBridge.exposeInMainWorld("electron", {
     onClose: () => ipcInvoke("onClose"),
+    onPopupClose: () => ipcInvoke("onPopupClose"),
     onFullScreen: () => ipcInvoke("onFullScreen"),
     onMinimize: () => ipcInvoke("onMinimize")
     

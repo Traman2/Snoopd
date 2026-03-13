@@ -20,10 +20,12 @@
   },
   "dependencies": {
     "@iconify-json/material-symbols": "^1.2.61",
+    "@iconify-json/mdi": "^1.2.3",
     "@tailwindcss/vite": "^4.1.13",
     "os-utils": "^0.0.14",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-router-dom": "^7.13.1",
     "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
